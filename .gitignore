@@ -3,3 +3,4 @@ target/
 server/Makefile~
 server/#setup.sh#
 server/.#setup.sh
+server/hello/Cargo.lock
