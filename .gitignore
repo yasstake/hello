@@ -1,0 +1,5 @@
+
+target/
+server/Makefile~
+server/#setup.sh#
+server/.#setup.sh
