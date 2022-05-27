@@ -4,6 +4,7 @@ server/Makefile~
 server/#setup.sh#
 server/.#setup.sh
 server/hello/Cargo.lock
+server/node_modules
 .vscode/
 .vscode/targets.log
 .vscode/dryrun.log
