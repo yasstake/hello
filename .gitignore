@@ -10,3 +10,4 @@ server/node_modules
 .vscode/dryrun.log
 .vscode/targets.log
 
+node_modules
