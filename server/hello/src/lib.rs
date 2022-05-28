@@ -1,3 +1,6 @@
+use std::str;
+
+
 #[cfg(test)]
 mod tests {
     #[test]
@@ -8,7 +11,7 @@ mod tests {
 }
 
 #[cfg(not(feature = "no-entrypoint"))]
-pub mod entrypoint {
+pub mod myentrypoint {
 
     use solana_program::{
         account_info::AccountInfo,
@@ -21,12 +24,19 @@ pub mod entrypoint {
     entrypoint!(process_instruction);
 
     pub fn process_instruction(
-        _program_id: &Pubkey,
-        _accounts: &[AccountInfo],
-        _instruction_data: &[u8],
+        program_id: &Pubkey,
+        accounts: &[AccountInfo],
+        instruction_data: &[u8],
     ) -> ProgramResult {
         msg!("Hello world");
+        // msg!(_program_id);                                
+        // msg!(_accounts);
+        let converted: String = String::from_utf8(instruction_data.to_vec()).unwrap();
+
+        msg!("DATA:");
+        msg!(&converted);
 
         Ok(())
     }
 }
+
