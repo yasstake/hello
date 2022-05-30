@@ -222,7 +222,7 @@ export async function establishPayer(): Promise<void> {
   console.log('Saying hello to', greetedPubkey.toBase58());
   const instruction = new TransactionInstruction({
     keys: [{pubkey: greetedPubkey, isSigner: false, isWritable: true}],
-    programId,
+    programId: programId,
     data: Buffer.alloc(0), // All instructions are hellos
   });
   await sendAndConfirmTransaction(
