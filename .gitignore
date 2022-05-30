@@ -11,3 +11,8 @@ server/node_modules
 .vscode/targets.log
 
 node_modules
+STEP1/package-lock.json
+STEP1/server/dist/
+STEP1/solana-wallet/
+.DS_Store
+*~

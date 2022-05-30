@@ -1,0 +1,28 @@
+{
+  "name": "hello",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yasstake/solana-hello"
+  },
+  "scripts": {
+    "start": "ts-node client/src/hello.ts",
+    "build-server": "cd server && make",
+    "deploy-server": "solana program deploy ./server/dist/hello.so"    
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.2.0",
+    "@solana/wallet-adapter-base": "^0.9.5",
+    "@solana/wallet-adapter-wallets": "^0.16.1",
+    "@solana/web3.js": "^1.43.2",
+    "borsh": "^0.7.0",
+    "mz": "^2.7.0",
+    "yaml": "^2.0.0",
+    "@types/mz": "^2.7.2",
+    "@tsconfig/recommended": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
